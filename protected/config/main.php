@@ -20,14 +20,12 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		/*
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'pwd',
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+			'ipFilters'=>false,
 		),
-		*/
 	),
 
 	// application components
@@ -37,16 +35,21 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
-		'urlManager'=>array(
-			'urlFormat'=>'path',
-			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			),
-		),
-		*/
+
+//		'urlManager'=>array(
+//			'urlFormat'=>'path',
+//            'showScriptName'=>false,
+//            'urlSuffix'=>'.html',
+//			'rules'=>array(
+//                'gii'=>'gii',
+//                'gii/<controller:\w+>'=>'gii/<controller>',
+//                'gii/<controller:\w+>/<action:\w+>'=>'gii/<controller>/<action>',
+//				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+//				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+//				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+//			),
+//		),
+
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
@@ -79,6 +82,9 @@ return array(
 				*/
 			),
 		),
+//        'CURL' =>array(
+//			'class' => 'application.extensions.Curl',
+//		),
 	),
 
 	// application-level parameters that can be accessed

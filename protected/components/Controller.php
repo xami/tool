@@ -1,4 +1,18 @@
 <?php
+function pr($data=array(), $wrap=false, $stop=false, $start='<pre>', $end='</pre>')
+{
+	if($wrap) echo $start;
+	print_r($data);
+	if($wrap) echo $end;
+	if($stop) die;
+}
+function pd($data=array(), $wrap=false, $stop=true, $start='<pre>', $end='</pre>')
+{
+	if($wrap) echo $start;
+	print_r($data);
+	if($wrap) echo $end;
+	if($stop) die;
+}
 /**
  * Controller is the customized base controller class.
  * All controller classes for this application should extend from this base class.
