@@ -5,7 +5,7 @@ class ToolController extends Controller
 	public function actionIndex()
 	{
         $xuk=new Xuk();
-        $xuk->getGallery();
+        $xuk->putPost();
 //		$this->render('index');
 	}
 
