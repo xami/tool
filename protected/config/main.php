@@ -22,7 +22,7 @@ return array(
 		// uncomment the following to enable the Gii tool
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'pwd',
+			'password'=>'password123',
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>false,
 		),
@@ -82,9 +82,12 @@ return array(
 				*/
 			),
 		),
-//        'CURL' =>array(
-//			'class' => 'application.extensions.Curl',
-//		),
+        'CCURL' =>array(
+			'class' => 'application.extensions.CCurl',
+		),
+        'cache'=>array(
+			'class'=>'CFileCache',
+		),
 	),
 
 	// application-level parameters that can be accessed

@@ -1,5 +1,5 @@
 <?php
-class Curl extends CApplicationComponent{
+class CCurl extends CApplicationComponent{
 	/**
 	* Curl config.
 	* @var array

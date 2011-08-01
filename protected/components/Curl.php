@@ -26,15 +26,15 @@ class Curl
 
 		if(empty(self::$c)){
 			//Run curl
-            if(!isset(Yii::app()->CURL)||empty(Yii::app()->CURL)){
+            if(!isset(Yii::app()->CCURL)||empty(Yii::app()->CCURL)){
                 return false;
             }
-			$curl = Yii::app()->CURL;
+			$curl = Yii::app()->CCURL;
 			$curl->run(array(CURLOPT_REFERER => $src));
 			$curl->setUrl($src);
 			$curl->exec();
 
-			if(Yii::app()->CURL->isError()) {
+			if(Yii::app()->CCURL->isError()) {
 				// Error
                 self::$c=array(
 					'ErrNo'=>$curl->getErrNo(),
